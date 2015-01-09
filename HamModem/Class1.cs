@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace HamModem
 {
-    public class Class1
+   
+
+    
+    public class MainClass
     {
+        public enum TestState
+        {
+            // used for initial receive testing...later put in correct protocol states
+            SearchingForLeader,
+            AcquireSymbolSync,
+            AcquireFrameSync,
+            AcquireFrameType,
+            DecodeFrameType,
+            AcquireFrame,
+            DecodeFrame
+        }
+
+        public static TestState State;
+
     }
 }
